@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Curso de programação mobile',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
       initialRoute: '/',
       routes: appRoutes,
