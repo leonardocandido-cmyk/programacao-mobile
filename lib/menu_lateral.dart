@@ -16,14 +16,22 @@ class _MenuLateralState extends State<MenuLateral> {
         children: [
           const DrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.blue
+              color: Colors.blue,
             ),
-            child: Text('Curso Flutter'),
+            child: Text(
+              'Curso Flutter',
+              style: TextStyle(color: Colors.white),
+            ),
           ),
           ListTile(
             leading: const Icon(Icons.crop_square),
             title: const Text("01 - Container"),
             onTap: () => Navigator.pushNamed(context, "/aula01"),
+          ),
+          ListTile(
+            leading: const Icon(Icons.view_column),
+            title: const Text("02 - Linhas e colunas"),
+            onTap: () => Navigator.pushNamed(context, "/aula02"),
           ),
         ],
       ),
