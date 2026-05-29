@@ -25,6 +25,11 @@ class _MenuLateralState extends State<MenuLateral> {
             title: const Text("01 - Container"),
             onTap: () => Navigator.pushNamed(context, "/aula01"),
           ),
+          ListTile(
+            leading: const Icon(Icons.table_rows),
+            title: const Text("02 - Linhas e Colunas"),
+            onTap: () => Navigator.pushNamed(context, "/aula02")
+          )
         ],
       ),
     );
