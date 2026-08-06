@@ -5,27 +5,25 @@ class Aula02 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double _tamanhoIcones = 40;  
-
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Aula 02 - Rows e Columns'),
+        title: Text("Aula 02 - Rowns e Columns"),
       ),
-      body: Container(
-        width: double.infinity,
+      // Cria uma barra de rolagem para o conteúdo da tela
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.home, size: _tamanhoIcones),
-                Icon(Icons.person, size: _tamanhoIcones),
-                Icon(Icons.settings, size: _tamanhoIcones),
-              ],
+            const SizedBox(
+              height: 20,
+              child: Text("Start (Padrão)"),
             ),
-            Column(),
-            Column(),
+            Container(
+              decoration: BoxDecoration(border: Border.all(color: Colors.red),),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+              ),
+            ),
           ],
         ),
       ),
