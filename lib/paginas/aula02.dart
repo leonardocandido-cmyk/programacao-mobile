@@ -6,6 +6,42 @@ class Aula02 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //Construindo widget customizavel (Reaproveitamento de código)
+    Widget _construirColuna(MainAxisAlignment alinhamento, IconData icone1,
+        IconData icone2, IconData icone3) {
+      // Definido uma coluna
+      return Container(
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.blue),
+        ),
+        height: 200,
+        // Criando uma coluna que alinha seu conteúdo no início
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: alinhamento,
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.green, width: 2),
+              ),
+              child: Icon(icone1),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.green, width: 2),
+              ),
+              child: Icon(icone2),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.green, width: 2),
+              ),
+              child: Icon(icone3),
+            ),
+          ],
+        ),
+      );
+    }
+
     Widget _construirLinha(
       MainAxisAlignment alinhamento, // Alinhamento por parâmetro
       IconData icone1, // Icones por parâmetro
@@ -62,37 +98,91 @@ class Aula02 extends StatelessWidget {
               Icons.eight_k_rounded,
               Icons.nine_k_rounded,
             ),
-            // Definido uma coluna
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.blue),
-              ),
-              height: 200,
-              // Criando uma coluna que alinha seu conteúdo no início
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.green, width: 2),
-                    ),
-                    child: Icon(Icons.one_k_outlined),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.green, width: 2),
-                    ),
-                    child: Icon(Icons.access_time_filled_rounded),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.green, width: 2),
-                    ),
-                    child: Icon(Icons.account_tree_sharp),
-                  ),
-                ],
-              ),
+            _construirColuna(
+              MainAxisAlignment.start,
+              Icons.seven_k_rounded,
+              Icons.eight_k_rounded,
+              Icons.nine_k_rounded,
+            ),
+            const SizedBox(
+              height: 20,
+              child: Text("End"),
+            ),
+            _construirLinha(
+              MainAxisAlignment.end,
+              Icons.seven_k_rounded,
+              Icons.eight_k_rounded,
+              Icons.nine_k_rounded,
+            ),
+            _construirColuna(
+              MainAxisAlignment.end,
+              Icons.seven_k_rounded,
+              Icons.eight_k_rounded,
+              Icons.nine_k_rounded,
+            ),
+            const SizedBox(
+              height: 20,
+              child: Text("Center"),
+            ),
+            _construirLinha(
+              MainAxisAlignment.center,
+              Icons.seven_k_rounded,
+              Icons.eight_k_rounded,
+              Icons.nine_k_rounded,
+            ),
+            _construirColuna(
+              MainAxisAlignment.center,
+              Icons.seven_k_rounded,
+              Icons.eight_k_rounded,
+              Icons.nine_k_rounded,
+            ),
+            const SizedBox(
+              height: 20,
+              child: Text("Space Between"),
+            ),
+            _construirLinha(
+              MainAxisAlignment.spaceBetween,
+              Icons.seven_k_rounded,
+              Icons.eight_k_rounded,
+              Icons.nine_k_rounded,
+            ),
+            _construirColuna(
+              MainAxisAlignment.spaceBetween,
+              Icons.seven_k_rounded,
+              Icons.eight_k_rounded,
+              Icons.nine_k_rounded,
+            ),
+            const SizedBox(
+              height: 20,
+              child: Text("Space Around"),
+            ),
+            _construirLinha(
+              MainAxisAlignment.spaceAround,
+              Icons.seven_k_rounded,
+              Icons.eight_k_rounded,
+              Icons.nine_k_rounded,
+            ),
+            _construirColuna(
+              MainAxisAlignment.spaceAround,
+              Icons.seven_k_rounded,
+              Icons.eight_k_rounded,
+              Icons.nine_k_rounded,
+            ),
+             const SizedBox(
+              height: 20,
+              child: Text("Space Evenly"),
+            ),
+            _construirLinha(
+              MainAxisAlignment.spaceEvenly,
+              Icons.seven_k_rounded,
+              Icons.eight_k_rounded,
+              Icons.nine_k_rounded,
+            ),
+            _construirColuna(
+              MainAxisAlignment.spaceEvenly,
+              Icons.seven_k_rounded,
+              Icons.eight_k_rounded,
+              Icons.nine_k_rounded,
             ),
           ],
         ),
