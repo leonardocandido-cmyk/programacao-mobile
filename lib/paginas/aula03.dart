@@ -17,7 +17,7 @@ class Aula03 extends StatelessWidget {
         // Precisamos do container para aplicar alinhamento de forma correta
         child: Container(
           width: double.infinity,
-          child: const Column(
+          child: Column(
             mainAxisSize: MainAxisSize.max,
             // Alinhando ao centro
             mainAxisAlignment: MainAxisAlignment.center,
@@ -32,6 +32,52 @@ class Aula03 extends StatelessWidget {
                   color: Colors.white,
                   size: 70,
                 ),
+              ),
+              SizedBox(height: 20),
+              Text(
+                "Leonardo Roberto",
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                "Professor",
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey,
+                ),
+              ),
+              const SizedBox(height: 30),
+              // Dispor elementos em linha
+              Row(
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Colors.indigo.shade50,
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    child: const Column(
+                      children: [
+                        Icon(
+                          Icons.abc,
+                          size: 40,
+                          color: Colors.indigo,
+                        ),
+                        const SizedBox(height: 10),
+                        Text(
+                          "Texto",
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text("Titulo"),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
