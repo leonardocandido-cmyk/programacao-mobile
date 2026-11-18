@@ -5,6 +5,38 @@ class Aula03 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget _criarInfo({
+      required IconData icone,
+      required String titulo,
+      required String texto,
+    }) {
+      return Container(
+        padding: EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          color: Colors.indigo.shade50,
+          borderRadius: BorderRadius.circular(50),
+        ),
+        child: Column(
+          children: [
+            Icon(
+              icone,
+              size: 40,
+              color: Colors.indigo,
+            ),
+            const SizedBox(height: 10),
+            Text(
+              texto,
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(titulo),
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Meu Perfil"),
@@ -52,31 +84,9 @@ class Aula03 extends StatelessWidget {
               // Dispor elementos em linha
               Row(
                 children: [
-                  Container(
-                    padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: Colors.indigo.shade50,
-                      borderRadius: BorderRadius.circular(50),
-                    ),
-                    child: const Column(
-                      children: [
-                        Icon(
-                          Icons.abc,
-                          size: 40,
-                          color: Colors.indigo,
-                        ),
-                        const SizedBox(height: 10),
-                        Text(
-                          "Texto",
-                          style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text("Titulo"),
-                      ],
-                    ),
-                  ),
+                  _criarInfo(icone: Icons.school, titulo: "Turmas", texto: "5"),
+                  _criarInfo(icone: Icons.code, titulo: "Projetos", texto: "12"),
+                  _criarInfo(icone: Icons.star, titulo: "Nível", texto: "10"),
                 ],
               ),
             ],
