@@ -84,11 +84,37 @@ class Aula03 extends StatelessWidget {
               // Dispor elementos em linha
               Row(
                 children: [
-                  _criarInfo(icone: Icons.school, titulo: "Turmas", texto: "5"),
-                  _criarInfo(icone: Icons.code, titulo: "Projetos", texto: "12"),
-                  _criarInfo(icone: Icons.star, titulo: "Nível", texto: "10"),
+                  // Cada Expanded ocupa o mesmo espaço disponível na linha
+                  Expanded(
+                      child: _criarInfo(
+                          icone: Icons.school, titulo: "Turmas", texto: "5")),
+                  SizedBox(width: 15), // Colocar um espaço entre os cards
+                  Expanded(
+                    child: _criarInfo(
+                        icone: Icons.code, titulo: "Projetos", texto: "12"),
+                  ),
+                  SizedBox(width: 15),
+                  Expanded(
+                    child: _criarInfo(
+                        icone: Icons.star, titulo: "Nível", texto: "10"),
+                  ),
                 ],
               ),
+              const SizedBox(height: 30),
+              const Text(
+                "Sobre Mim",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                ),
+              ),
+              const SizedBox(height: 10),
+              const Text(
+                "Sou um torcedor apaixonado pelo tricolor dos pampas"
+                ", Gosto de assistir séries/filmes de terror, e jogar no "
+                "meu videogame.",
+                textAlign: TextAlign.justify,
+              )
             ],
           ),
         ),
