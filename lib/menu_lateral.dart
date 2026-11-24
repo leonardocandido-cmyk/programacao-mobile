@@ -32,7 +32,12 @@ class _MenuLateralState extends State<MenuLateral> {
             leading: const Icon(Icons.person),
             title: const Text("03 - Perfil do usuário"),
             onTap: () => Navigator.pushNamed(context, "/aula03"),
-          )
+          ),
+          ListTile(
+            leading: const Icon(Icons.touch_app),
+            title: const Text("04 - StatefulWidget"),
+            onTap: () => Navigator.pushNamed(context, "/aula04"),
+          ),
         ],
       ),
     );
